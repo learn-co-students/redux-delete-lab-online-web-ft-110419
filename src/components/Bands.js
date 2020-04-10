@@ -1,7 +1,7 @@
 import React from 'react'
 import Band from './Band'
 const Bands = props => {
-    const bands = props.bands.map((band) => <Band deleteBand={props.deleteBand} key={band.id} bandName={band.bandName} />)
+    const bands = props.bands.map(band => <Band deleteBand={props.deleteBand} key={band.id} {...band} />)
     return (
         <div>
             {bands}
