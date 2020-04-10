@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-
 class Band extends Component {
-
   render() {
-    return(
+    return (
       <div>
-        Band Component
+        <li>{console.log(this.props)}</li>
+        <button>DELETE</button>
       </div>
     );
   }
