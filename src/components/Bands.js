@@ -7,7 +7,7 @@ const Bands = props => {
     return (
         <div>
             <ul>
-                {props.bands.map((band) => <Band key={band.id} band={band}/>)}
+                {props.bands.map((band) => <Band key={band.id} band={band} deleteBand={props.deleteBand}/>)}
             </ul>
         </div>
     )
