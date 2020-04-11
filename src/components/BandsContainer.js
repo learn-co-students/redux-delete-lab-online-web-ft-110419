@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 class BandsContainer extends Component {
   render() {
     
-    console.log(this.state)
+    console.log(this.props)
     
     return (
       <div>
@@ -17,7 +17,6 @@ class BandsContainer extends Component {
     )
   }
 }
-
 
 const mapStateToProps = ({ bands }) => ({ bands })
 

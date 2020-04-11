@@ -3,34 +3,30 @@ import { connect } from 'react-redux';
 
 class Band extends Component {
 
-  handleClick() {
+  handleClick = id => {
+    console.log(id, this.props)
+    this.props.deleteBand(id)
 
   }
 
-
   render() {
-    console.log("Are you Working", this.state)
-
-
+    console.log("Band Component", this.props)
 
     return(
       <div>
-        <h1>{this.props.band.name}</h1>
-        <button onClick={this.handleClick}>DELETE</button>
+        <li>{this.props.band.name}</li>
+        <button onClick={(event) => this.handleClick(this.props.band.id)}>DELETE</button>
       </div>
     );
   }
 };
 
 const mapDispatchToProps = dispatch => {
-  console.log(this.props)
 
   return {
 		deleteBand: id => dispatch({ type: "DELETE_BAND", id })
   }
   
 }
-
-
 
 export default connect(null, mapDispatchToProps)(Band);
